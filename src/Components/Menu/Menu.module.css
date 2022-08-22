@@ -1,0 +1,29 @@
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1%;
+    background-color: #180A0A;
+    font-family: 'Star Jedi';
+    color: yellow;
+}
+
+.menu h1 {
+
+    margin-left: 3%;
+
+}
+
+.buttons {
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    font-size: 1.5em;
+    
+}
+
+.buttons a {
+    text-decoration: none;
+    color: yellow;
+
+}
