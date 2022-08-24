@@ -9,7 +9,13 @@
     src: url('../public/Starjedi.ttf')
 }
 
-body {
+@font-face {
+    font-family: 'Star Sith';
+    src: url('../public/Starjhol.ttf')
+}
+
+
+body{
     background-color: #711A75;
 }
 
@@ -17,4 +23,6 @@ body {
 /* font-family: 'Kumbh Sans', sans-serif; */
 
 
-/* https://colorhunt.co/palette/180a0a711a75f10086f582a7 */
+/* dark: https://colorhunt.co/palette/180a0a711a75f10086f582a7 */
+
+/* light: https://colorhunt.co/palette/fef5edd3e4cdadc2a999a799 */

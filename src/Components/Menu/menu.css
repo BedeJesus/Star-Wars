@@ -2,28 +2,39 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     padding: 1%;
-    background-color: #180A0A;
-    font-family: 'Star Jedi';
     color: yellow;
 }
 
+#light .menu{
+    background-color: blue;
+}
+
+#dark .menu{
+    background-color: black;
+}
+
 .menu h1 {
-
-    margin-left: 3%;
-
+    font-family: 'Star Jedi';
+    margin-left: 2%;
 }
 
 .buttons {
     display: flex;
-    width: 60%;
+    width: 50%;
     justify-content: space-around;
     font-size: 1.5em;
-    
 }
 
 .buttons a {
+    font-family: 'Star Sith';
     text-decoration: none;
     color: yellow;
+    transition: 2s;
+}
+
+.buttons a:hover{
+    font-family: 'Star Jedi';
 
 }

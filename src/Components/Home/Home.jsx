@@ -7,7 +7,6 @@ export default function Home(){
 
     const [person,setPerson] = useState({})
     const [choice,setChoice] = useState(0)
-
     
 
     useEffect(() => {
@@ -17,16 +16,9 @@ export default function Home(){
     }, [choice])
 
 
-
-  
-
-
-
     return(
         <div className={styles.home}>
-            <h1>Home</h1>
-            <h2>{person.name}</h2>
-            <input type= 'number' value={choice} onChange={e => setChoice(e.target.value)}></input>
+            <h1>Personagens</h1>
         </div>
     )
 }
