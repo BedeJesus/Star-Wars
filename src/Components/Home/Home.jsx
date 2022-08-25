@@ -1,25 +1,42 @@
 import { useEffect, useState } from 'react'
 import api from '../../utils/api'
-import styles from './Home.module.css'
+import Card from '../Card/Card'
+import './home.css'
 
 
-export default function Home(){
+export default function Home() {
 
-    const [person,setPerson] = useState({})
-    const [choice,setChoice] = useState(0)
-    
+    const [person, setPerson] = useState({})
+    const [loading, setLoading] = useState(null)
 
     useEffect(() => {
-        api.get(`/people/${choice}`).then((response) => {
+        api.get(`/people`).then((response) => {
             setPerson(response.data)
+            setLoading(true)
         })
-    }, [choice])
+    }, [])
+
+ 
 
 
-    return(
-        <div className={styles.home}>
-            <h1>Personagens</h1>
+    return (
+
+        <div className='home'>
+            {loading ? ( 
+                <>
+                   
+                    <Card person={person.results[0]}
+                        description='É o personagem principal da saga,filho de Darth vader com a princesa Padmé Amidala ' />
+
+                </>
+            ) : (
+                <>
+                    <h1>Carregando!</h1>
+                </>
+            )
+            }
         </div>
+
     )
 }
 

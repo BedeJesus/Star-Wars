@@ -4,7 +4,6 @@ import Home from "./Home/Home";
 
 
 
-
 export default function Content(){
     return(
         <div>
