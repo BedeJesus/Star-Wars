@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
     padding: 1%;
     color: yellow;
 }
@@ -20,11 +19,14 @@
     margin-left: 2%;
 }
 
-.buttons {
+.menu .buttons {
     display: flex;
-    width: 50%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 1.5em;
+    width: 30em;
+    overflow: hidden;
+    
+    
 }
 
 .buttons a {
@@ -32,6 +34,10 @@
     text-decoration: none;
     color: yellow;
     transition: 2s;
+    
+
+    
+
 }
 
 .buttons a:hover{

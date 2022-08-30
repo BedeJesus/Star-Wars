@@ -13,9 +13,9 @@ export default function Menu() {
             <div className='buttons'>
 
                 <Toggle/>
-                <Link to ='/'>Personagens</Link>
-                <Link to ='/'>Historias</Link>
-                <Link to ='/'>Planetas</Link>
+                <Link to ='/'>Characters</Link>
+                <Link to ='/'>Story</Link>
+                <Link to ='/'>Planets</Link>
                 
                 
             </div>

@@ -1,7 +1,31 @@
 .home{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
+}
+
+.home .carousel{
+    display: flex;
+    
+}
+
+.home .buttons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.home .buttons button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2em;
+    
+}
+
+.home .buttons button:hover{
+    color: red;
 }
 
 
