@@ -25,22 +25,57 @@
     font-size: 1.5em;
     width: 30em;
     overflow: hidden;
-    
+}
+
+.menu .toggle{
+    margin-top: 1.2%;
     
 }
+
 
 .buttons a {
     font-family: 'Star Sith';
     text-decoration: none;
     color: yellow;
     transition: 2s;
-    
-
-    
-
 }
 
 .buttons a:hover{
     font-family: 'Star Jedi';
 
 }
+
+.menu .sub-menu{
+    display: none;
+}
+
+@media(max-width : 1000px) {
+
+    .menu .buttons{
+        display: none;
+    }
+
+    .menu .sub-menu{
+        display: flex;
+    }
+
+    .menu .sub-menu button{
+        margin-top: 1%; 
+        background-color:transparent;
+        color: yellow;
+        border: none;
+    }
+
+    .menu .sub-menu button:hover{
+        cursor: pointer;
+    }
+
+    .menu .toggle{
+        margin-top: 4%;        
+        margin-right: 1em;
+    }
+
+    
+
+}
+

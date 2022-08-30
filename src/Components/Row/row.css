@@ -1,0 +1,31 @@
+.row .carousel{
+    display: flex;
+    
+}
+
+.row .buttons{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.row .buttons button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-size: 2em;
+    
+}
+
+.row .buttons button:hover{
+    color: red;
+}
+
+.row h1{
+    color: yellow;
+    margin-left: 2%;
+    font-family: 'Star Jedi';
+}
+
+

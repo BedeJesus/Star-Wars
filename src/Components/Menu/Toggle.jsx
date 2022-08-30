@@ -9,10 +9,7 @@ export default function Toggle() {
 
     function handleThemeToggle() {
         setTheme(theme === 'light' ? 'dark': 'light')
-
-
     }
-
 
     return (
         <div className="toggle">
