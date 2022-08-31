@@ -9,7 +9,7 @@ export default function Menu() {
     return (
         <div className='menu'>
 
-            <h1>Star Wars </h1>
+            <h1>Star Wars</h1>
 
             <div className='buttons'>
 

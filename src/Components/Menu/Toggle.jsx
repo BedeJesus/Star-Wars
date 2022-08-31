@@ -1,4 +1,3 @@
-import './toggle.css'
 import { useContext } from "react"
 import Switch from "react-switch"
 import { ThemeContext } from "../../App"

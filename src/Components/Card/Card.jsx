@@ -1,19 +1,19 @@
 import './card.css'
 
 
-export default function Card(props){
+export default function Card(props) {
 
 
 
-    return(
+    return (
         <>
-        <div className="card">
-            <span className='name'>{props.person.name}</span>
-            <span className='height'>Height: {props.person.height}</span>
-            <span className='desc'>{props.description}</span>
-            
-            
-        </div>
+            <div className="card">
+                <p className='name'>{props.person.name}</p>
+                <p className='height'><span>Height:</span> {props.person.height}</p>
+                <p className='desc'>{props.description}</p>
+                <p className='planet'><span>Home planet:</span>tatoine</p>
+
+            </div>
         </>
     )
 }
