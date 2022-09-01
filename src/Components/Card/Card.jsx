@@ -9,9 +9,9 @@ export default function Card(props) {
         <>
             <div className="card">
                 <p className='name'>{props.person.name}</p>
-                <p className='height'><span>Height:</span> {props.person.height}</p>
-                <p className='desc'>{props.description}</p>
-                <p className='planet'><span>Home planet:</span>tatoine</p>
+                <p> <span>Height:</span> {props.person.height}</p>
+                <p> {props.description}</p>
+                <p> <span>Home planet:</span>tatoine</p>
 
             </div>
         </>

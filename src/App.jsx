@@ -7,7 +7,7 @@ import Menu from './Components/Menu/Menu';
 export const ThemeContext = createContext()
 
 function App() {
-  const [theme, setTheme] = useState('light')
+  const [theme, setTheme] = useState('dark')
 
 
   return (

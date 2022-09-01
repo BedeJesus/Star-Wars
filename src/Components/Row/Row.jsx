@@ -3,6 +3,7 @@ import api from '../../utils/api'
 import Card from '../Card/Card'
 import './row.css'
 import { ArrowLeft, ArrowRight } from "phosphor-react";
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 export default function Row() {
@@ -22,19 +23,17 @@ export default function Row() {
             setLoading(true)
         })
 
-
     }, [])
+
+
     return (
         <div className='row'>
 
 
             {loading ? (
                 <>
-                <h1>Main Characters</h1>
+                    <h1>Main Characters</h1>
                     <div className='carousel'>
-
-                        
-
 
                         <Card person={person.results[0]}
                             description='The main character od the saga,son of Anakin Skywalker with princess Padmé. Became a Jedi to fight the Empire'

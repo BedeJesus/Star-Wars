@@ -3,14 +3,14 @@
     flex-direction: column;
     flex: none;
     background-color:#711A75 ;
-    margin: 2% 3% 0% 1.5%;
+    margin: 2% 3% 2% 1.5%;
     border: 2px solid black;
     border-radius: 7px;
     width: 15em;
     height: 15em;
     padding: 1%;
     font-family: 'Kumbh Sans', sans-serif;
-    box-shadow: 10px 8px 10px  black;
+    box-shadow: 10px 8px 10px  rgb(47, 46, 46);
 
 }
 
