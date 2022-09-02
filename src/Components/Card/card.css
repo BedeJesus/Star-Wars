@@ -3,7 +3,8 @@
     flex-direction: column;
     flex: none;
     background-color:#711A75 ;
-    margin: 2% 3% 2% 1.5%;
+    margin-top:2% ;
+    margin-bottom:4% ;
     border: 2px solid black;
     border-radius: 7px;
     width: 15em;

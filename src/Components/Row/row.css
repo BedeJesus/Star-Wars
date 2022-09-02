@@ -5,33 +5,39 @@
 .row .carousel{
     display: flex;
     overflow: hidden;
-    
-}
-
-.row .buttons{
-    display: flex;
-    justify-content: center;
-    
-}
-
-.row .buttons button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    font-size: 2em;
-    margin-top: 1%;
-    
-}
-
-.row .buttons button:hover{
-    color: red;
 }
 
 .row h1{
     color: yellow;
-    margin-left: 2%;
+    margin-left: 2.5%;
     font-family: 'Star Jedi';
 }
+
+.swiper-slide{
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-button-prev{
+  color: #0000;
+}
+
+.swiper-button-next{
+    color: #0000;
+  }
+
+
+  /* @media(max-width : 1000px) {
+
+    .swiper-slide{
+    }
+
+     
+
+} */
+
+
+
+
 
 

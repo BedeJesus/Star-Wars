@@ -1,8 +1,9 @@
+import { useState,useEffect } from 'react'
 import './card.css'
+import api from '../../utils/api'
 
 
 export default function Card(props) {
-
 
 
     return (
@@ -11,7 +12,7 @@ export default function Card(props) {
                 <p className='name'>{props.person.name}</p>
                 <p> <span>Height:</span> {props.person.height}</p>
                 <p> {props.description}</p>
-                <p> <span>Home planet:</span>tatoine</p>
+                <p> <span>Home planet:</span>ainda n</p>
 
             </div>
         </>
