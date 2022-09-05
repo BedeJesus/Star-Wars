@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import api from '../../utils/api'
 import Card from '../Card/Card'
 import './row.css'
@@ -11,27 +11,34 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
+
 export default function Row() {
 
-    const [person, setPerson] = useState([])
+    const [people, setPeople] = useState([])
     const [loading, setLoading] = useState(false)
-    const [sum, setSum] = useState(0)
-    const [width, setWidth] = useState(0)
+
+    const shouldLog = useRef(true)
+
 
     useEffect(() => {
-        for (let i = 0; i < 2; i++) {
-            api.get(`/people/${i}`).then((response) => {
-                setPerson([...person, {
-                    data: response.data
-                }])
-            })
+        if (shouldLog.current) {
+            shouldLog.current = false
+            
+            for (let i = 1; i <= 20; i++) {
+                api.get(`/people/${i}`).then((response) => {
+                    setPeople([...people, people.unshift(response.data)])
+
+                    people.sort(function (a, b) {
+                        return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+                        
+                    });
+                    // CONTINUAR: https://www.youtube.com/watch?v=8yU3OVVsC7k
+
+                })
+            }
+            setLoading(true)
         }
-
-        setLoading(true)
-
-
     }, [])
-
 
     function SetSlidesPerView() {
         if (window.innerWidth <= 1000) {
@@ -40,22 +47,21 @@ export default function Row() {
             return 4
         }
     }
-    // fazer um for na api dos personagens e ir interando para armazenar todos os personagens em uma variavvel
-
-
 
     return (
         <div className='row'>
 
-            {console.log(person)}
-            
+            {console.log(people)}
+
 
             {loading ? (
+              
                 <>
+
+                    {console.log(loading)}
+
                     <h1>Main Characters</h1>
                     <div className='carousel'>
-
-
                         <Swiper
                             modules={[Navigation, Pagination, Scrollbar, A11y]}
                             spaceBetween={10}
@@ -63,27 +69,22 @@ export default function Row() {
                             navigation={true}
 
                         >
-                            <SwiperSlide><Card person={person[0].data}
+
+
+
+                            <SwiperSlide><Card person={people[0]}
                                 description='The main character od the saga,son of Anakin Skywalker with princess Padmé. Became a Jedi to fight the Empire'
                             /></SwiperSlide>
 
-                            <SwiperSlide><Card person={person[1].data}
+                            <SwiperSlide><Card person={people[5]}
                                 description='The villan of the saga, a great sith lord trained by Palpatine, used to be Anakin Skywalker,but after de convertion to the dark side became Darth Vader'
                             /></SwiperSlide>
 
-                            <SwiperSlide><Card person={person[2].data}
+                            <SwiperSlide><Card person={people[10]}
                                 description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
                             /></SwiperSlide>
 
-                            <SwiperSlide><Card person={person[3].data}
-                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
-                            /></SwiperSlide>
-
-                            <SwiperSlide><Card person={person[4].data}
-                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
-                            /></SwiperSlide>
-
-                            <SwiperSlide><Card person={person[5].data}
+                            <SwiperSlide><Card person={people[7]}
                                 description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
                             /></SwiperSlide>
 

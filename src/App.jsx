@@ -8,10 +8,10 @@ export const ThemeContext = createContext()
 
 function App() {
   const [theme, setTheme] = useState('dark')
-
+  
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <ThemeContext.Provider value={{ theme, setTheme}}>
       <div className="App" id ={theme} >
         <Router>
           <Menu />
