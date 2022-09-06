@@ -22,23 +22,30 @@ export default function Row() {
 
     useEffect(() => {
         if (shouldLog.current) {
-            shouldLog.current = false
-            
-            for (let i = 1; i <= 20; i++) {
-                api.get(`/people/${i}`).then((response) => {
-                    setPeople([...people, people.unshift(response.data)])
+            async function getData() {
+                shouldLog.current = false
 
-                    people.sort(function (a, b) {
-                        return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-                        
-                    });
-                    // CONTINUAR: https://www.youtube.com/watch?v=8yU3OVVsC7k
+                for (let i = 1; i <= 30; i++) {
 
-                })
+                    if (i === 17) {
+                        i++ //api doesnt have the 17 character
+                    }
+
+                    await api.get(`/people/${i}`).then((response) => {
+                        setPeople([...people, people.unshift(response.data)])
+
+                        people.sort(function (a, b) {
+                            return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+
+                        });
+                    })
+                }
+                setLoading(true)
             }
-            setLoading(true)
+            getData()
         }
     }, [])
+
 
     function SetSlidesPerView() {
         if (window.innerWidth <= 1000) {
@@ -53,12 +60,9 @@ export default function Row() {
 
             {console.log(people)}
 
-
             {loading ? (
-              
-                <>
 
-                    {console.log(loading)}
+                <>
 
                     <h1>Main Characters</h1>
                     <div className='carousel'>
@@ -70,23 +74,34 @@ export default function Row() {
 
                         >
 
-
-
-                            <SwiperSlide><Card person={people[0]}
+                            <SwiperSlide><Card person={people[18]}
                                 description='The main character od the saga,son of Anakin Skywalker with princess Padmé. Became a Jedi to fight the Empire'
                             /></SwiperSlide>
 
-                            <SwiperSlide><Card person={people[5]}
+                            <SwiperSlide><Card person={people[9]}
                                 description='The villan of the saga, a great sith lord trained by Palpatine, used to be Anakin Skywalker,but after de convertion to the dark side became Darth Vader'
                             /></SwiperSlide>
 
-                            <SwiperSlide><Card person={people[10]}
+                            <SwiperSlide><Card person={people[16]}
                                 description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
                             /></SwiperSlide>
 
-                            <SwiperSlide><Card person={people[7]}
+                            <SwiperSlide><Card person={people[11]}
                                 description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
                             /></SwiperSlide>
+
+                            <SwiperSlide><Card person={people[8]}
+                                description='The villan of the saga, a great sith lord trained by Palpatine, used to be Anakin Skywalker,but after de convertion to the dark side became Darth Vader'
+                            /></SwiperSlide>
+
+                            <SwiperSlide><Card person={people[22]}
+                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
+                            /></SwiperSlide>
+
+                            <SwiperSlide><Card person={people[27]}
+                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
+                            /></SwiperSlide>
+
 
 
                         </Swiper>

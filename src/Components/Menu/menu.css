@@ -59,6 +59,7 @@
 
     .menu .sub-menu{
         display: flex;
+        
     }
 
     .menu .sub-menu button{
