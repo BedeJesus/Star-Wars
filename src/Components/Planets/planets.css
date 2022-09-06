@@ -1,0 +1,48 @@
+.planets {
+    margin-top: 2%;
+}
+
+.planets h1 {
+    color: yellow;
+    margin-left: 2.5%;
+    font-family: 'Star Jedi';
+}
+
+.planets .all_planets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 1%;
+}
+
+.planets .planet_card {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    margin-bottom: 1em;
+    height: 15em;
+    width: 20em;
+    border: 3px solid red;
+    border-radius: 10px;
+    box-shadow: 10px 8px 13px rgb(0, 0, 0);
+}
+
+.planets .planet_card h1 {
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+}
+
+.planets .planet_card span {
+    color: aquamarine;
+}
+
+.planets .planet_card p {
+    color: yellow;
+}
+
+.planets .planet_card p,
+span {
+    font-family: 'Kumbh Sans', sans-serif;
+    margin: 5% 0 0 5%
+}

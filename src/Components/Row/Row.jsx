@@ -16,7 +16,6 @@ export default function Row() {
 
     const [people, setPeople] = useState([])
     const [loading, setLoading] = useState(false)
-
     const shouldLog = useRef(true)
 
 
@@ -28,7 +27,7 @@ export default function Row() {
                 for (let i = 1; i <= 30; i++) {
 
                     if (i === 17) {
-                        i++ //api doesnt have the 17 character
+                        i++ //api doesnt have the 17º character
                     }
 
                     await api.get(`/people/${i}`).then((response) => {
@@ -112,11 +111,9 @@ export default function Row() {
 
             ) : (
                 <>
-                    <h1>Carregando!</h1>
+                    <h1>Loading!</h1>
                 </>
-            )
-
-            }
+            )}
 
         </div>
     )

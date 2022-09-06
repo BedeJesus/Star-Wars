@@ -5,6 +5,7 @@
 .row .carousel{
     display: flex;
     overflow: hidden;
+    margin-top: 1%;
 }
 
 .row h1{
