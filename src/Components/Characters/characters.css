@@ -8,6 +8,10 @@
     font-family: 'Star Jedi';
 }
 
+#light .characters h1{
+    color: blue;
+}
+
 .characters .all_characters {
     display: flex;
     flex-wrap: wrap;
@@ -27,10 +31,22 @@
     box-shadow: 10px 8px 13px rgb(0, 0, 0);
 }
 
+#light .characters .character_card {
+    background-color:rgb(38, 106, 39,0.8);
+    border: 3px solid blue;
+}
+
+
+
 .characters .character_card h1 {
     font-size: 1.5em;
     display: flex;
     justify-content: center;
+    color: yellow;
+}
+
+#light .characters .character_card h1 {
+    color: yellow;
 }
 
 .characters .character_card span {
@@ -44,5 +60,5 @@
 .characters .character_card p,
 span {
     font-family: 'Kumbh Sans', sans-serif;
-    margin: 5% 0 0 5%
+    margin: 5% 0 0 5%;
 }

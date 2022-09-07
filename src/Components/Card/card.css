@@ -16,6 +16,11 @@
     
 }
 
+#light .card{
+    background-color:rgb(38, 106, 39,0.8);
+    border: 3px solid blue;
+}
+
 .card p{
     margin-bottom: 5%;
     color:aquamarine ;

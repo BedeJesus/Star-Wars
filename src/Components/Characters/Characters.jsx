@@ -8,6 +8,7 @@ export default function Characters() {
 
     const [people, setPeople] = useState([])
     const [loading, setLoading] = useState(false)
+    const [search, setSearch] = useState('')
     const shouldLog = useRef(true)
 
 
@@ -39,17 +40,16 @@ export default function Characters() {
 
 
 
+
     return (
         <div className="characters">
 
             {loading ? (
 
                 <>
-
                     <h1>All Characters</h1>
-                    <div className='all_characters'>
 
-                        {/* fazer uma filtragem por nome */}
+                    <div className='all_characters'>
 
                         {people.map((person) => (
 
@@ -61,8 +61,8 @@ export default function Characters() {
                                 <p> <span>Skin Color:</span> {person.skin_color}</p>
                                 <p> <span>Home World:</span> Tatoine</p>
                             </div>
-
                         ))}
+
 
 
 

@@ -48,7 +48,7 @@ export default function Planets() {
 
                     <h1>All planets</h1>
                     <div className='all_planets'>
-                        {/* fazer uma filtragem por nome */}
+            
 
                         {planets.map((planet) => (
 

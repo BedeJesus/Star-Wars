@@ -9,6 +9,12 @@
     z-index: 2;
 }
 
+#light .sidebar{
+    background-color: hsl(240, 100%, 50%,0.6);
+}
+
+
+
 
 .sidebar a{
     color: yellow;
@@ -18,7 +24,7 @@
     margin-bottom:1em ;
     font-size: 1.3em;
     padding-left: 4em;
-    padding-right: 4em;    
+    padding-right: 3em;    
     display: flex;
 }
 

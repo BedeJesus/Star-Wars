@@ -1,34 +1,42 @@
-.row{
+.row {
     margin-top: 2%;
 }
 
-.row .carousel{
+.row .carousel {
     display: flex;
     overflow: hidden;
     margin-top: 1%;
 }
 
-.row h1{
-    color: yellow;
+.row h1 {
+
     margin-left: 2.5%;
     font-family: 'Star Jedi';
 }
 
-.swiper-slide{
+#light .row h1 {
+    color: blue;
+}
+
+#dark .row h1 {
+    color: yellow;
+}
+
+.swiper-slide {
     display: flex;
     justify-content: center;
 }
 
-.swiper-button-prev{
-  color: #0000;
+.swiper-button-prev {
+    color: #0000;
 }
 
-.swiper-button-next{
+.swiper-button-next {
     color: #0000;
-  }
+}
 
 
-  /* @media(max-width : 1000px) {
+/* @media(max-width : 1000px) {
 
     .swiper-slide{
     }
@@ -36,9 +44,3 @@
      
 
 } */
-
-
-
-
-
-
