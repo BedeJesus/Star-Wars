@@ -14,8 +14,6 @@
 }
 
 
-
-
 .sidebar a{
     color: yellow;
     font-family: 'Star Sith';
@@ -24,7 +22,7 @@
     margin-bottom:1em ;
     font-size: 1.3em;
     padding-left: 4em;
-    padding-right: 3em;    
+    padding-right: 3.1em;    
     display: flex;
 }
 

@@ -22,7 +22,7 @@ export default function Menu() {
 
                 <Toggle />
                 <Link to='/characters'>Characters</Link>
-                <Link to='/'>Story</Link>
+                <Link to='/films'>Films</Link>
                 <Link to='/planets'>Planets</Link>
 
             </div>

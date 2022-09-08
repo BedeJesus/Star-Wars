@@ -8,7 +8,6 @@ export default function Characters() {
 
     const [people, setPeople] = useState([])
     const [loading, setLoading] = useState(false)
-    const [search, setSearch] = useState('')
     const shouldLog = useRef(true)
 
 
@@ -39,6 +38,8 @@ export default function Characters() {
     }, [])
 
 
+    
+
 
 
     return (
@@ -47,6 +48,7 @@ export default function Characters() {
             {loading ? (
 
                 <>
+                
                     <h1>All Characters</h1>
 
                     <div className='all_characters'>
@@ -62,11 +64,6 @@ export default function Characters() {
                                 <p> <span>Home World:</span> Tatoine</p>
                             </div>
                         ))}
-
-
-
-
-
 
                     </div>
 

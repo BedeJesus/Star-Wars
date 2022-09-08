@@ -10,7 +10,7 @@ export default function Sidebar() {
             <div className='options'>
 
                 <Link to='/characters'> <User size={20} className='user'/>  Characters</Link>
-                <Link to='/'> <Book size={20} className='book'/> Story</Link>
+                <Link to='/films'> <Book size={20} className='book'/> Films</Link>
                 <Link to='/planets'> <Planet size={20} className='planet'/> Planets</Link>
 
             </div>
