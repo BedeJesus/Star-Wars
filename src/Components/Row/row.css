@@ -1,15 +1,20 @@
 .row {
-    margin-top: 2%;
+    background-color: darkslategrey;
+}
+
+#light .row {
+    background-color: rgb(214, 202, 214);
 }
 
 .row .carousel {
+    margin-top: 2%;
     display: flex;
     overflow: hidden;
     margin-top: 1%;
 }
 
 .row h1 {
-
+    margin-top: 2%;
     margin-left: 2.5%;
     font-family: 'Star Jedi';
 }
@@ -35,12 +40,7 @@
     color: #0000;
 }
 
-
-/* @media(max-width : 1000px) {
-
-    .swiper-slide{
-    }
-
-     
-
-} */
+.row .loading {
+    margin-top: 2%;
+    padding-bottom: 100%;
+}

@@ -15,48 +15,29 @@ export default function Films() {
             async function getData() {
                 shouldLog.current = false
 
-                
-
                 for (let i = 1; i <= 6; i++) {
 
-                    
                     await api.get(`/films/${i}`).then((response) => {
-                        setFilms([...films, films.push(response.data)])
+                        setFilms([...films, films.unshift(response.data)])
 
-                        films.sort(function (a, b) {
-                            return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-
-                        });
                     })
-
-
                 }
-
-                
-
-
-
-
-
-
-
-
                 setLoading(true)
             }
+            films.sort(function (a, b) {
+                return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+
+            });
             getData()
+
         }
     }, [])
-
-
-
 
 
 
     return (
         <div className="films">
 
-            
-            {console.log(films)}
 
             {loading ? (
 
@@ -81,9 +62,10 @@ export default function Films() {
 
             ) : (
                 <>
-                    <h1>Loading!</h1>
+                    <h1 className='loading'>Loading!</h1>
                 </>
-            )}
-        </div>
+            )
+            }
+        </div >
     )
 }

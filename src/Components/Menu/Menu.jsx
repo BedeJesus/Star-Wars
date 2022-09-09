@@ -4,19 +4,20 @@ import './menu.css'
 import { List, X } from 'phosphor-react'
 import { useState } from 'react'
 import Sidebar from './SideBar/SideBar'
+import { ThemeContext } from "../../App"
+import { useContext } from 'react'
 
 
 export default function Menu() {
 
-    const [sideBar, setSideBar] = useState(false)
-    const showSideBar = () => setSideBar(!sideBar)
+    const {sideBar,showSideBar} = useContext(ThemeContext)
 
 
 
     return (
         <div className='menu'>
 
-            <h1>Star Wars</h1>
+            <Link to='/' className='star_wars'>Star Wars</Link> 
 
             <div className='buttons'>
 
@@ -40,7 +41,7 @@ export default function Menu() {
                 ) : (
                     <button onClick={showSideBar}><List size={40} /></button>
                 )}
-                
+
             </div>
         </div>
     )

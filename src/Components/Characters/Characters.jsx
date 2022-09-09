@@ -16,7 +16,7 @@ export default function Characters() {
             async function getData() {
                 shouldLog.current = false
 
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 30; i++) {
 
                     if (i === 17) {
                         i++ //api doesnt have the 17 character
@@ -24,21 +24,25 @@ export default function Characters() {
 
                     await api.get(`/people/${i}`).then((response) => {
                         setPeople([...people, people.unshift(response.data)])
+                    })
 
-                        people.sort(function (a, b) {
-                            return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
-
-                        });
+                    await api.get(`/planets/${i}`).then((response) => {
+                        setPeople([...people,{
+                           homeworld: response.data.name}])
                     })
                 }
                 setLoading(true)
             }
+
+            people.sort(function (a, b) {
+                return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+
+            })
             getData()
         }
     }, [])
 
 
-    
 
 
 
@@ -48,8 +52,8 @@ export default function Characters() {
             {loading ? (
 
                 <>
-                
-                    <h1>All Characters</h1>
+
+                    <h1>Some Characters From the Saga</h1>
 
                     <div className='all_characters'>
 
@@ -60,8 +64,8 @@ export default function Characters() {
                                 <p> <span>Gender:</span> {person.gender}</p>
                                 <p> <span>Height:</span> {person.height}</p>
                                 <p> <span>Mass:</span> {person.mass}</p>
-                                <p> <span>Skin Color:</span> {person.skin_color}</p>
-                                <p> <span>Home World:</span> Tatoine</p>
+                                <p> <span>Skin Color: </span> {person.skin_color}</p>
+                                <p> <span>Hair Color: </span>{person.hair_color}</p>
                             </div>
                         ))}
 
@@ -71,7 +75,7 @@ export default function Characters() {
 
             ) : (
                 <>
-                    <h1>Loading!</h1>
+                    <h1 className='loading'>Loading!</h1>
                 </>
             )}
         </div>

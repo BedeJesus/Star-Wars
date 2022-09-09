@@ -1,6 +1,12 @@
 .films {
-    margin-top: 2%;
+    padding-top: 2%;
+    background-color: darkslategrey;
 }
+
+#light .films {
+    background-color: rgb(214, 202, 214);
+}
+
 
 .films h1 {
     color: yellow;
@@ -61,4 +67,8 @@
 span {
     font-family: 'Kumbh Sans', sans-serif;
     margin: 5% 0 0 5%;
+}
+
+.films .loading{
+    padding-bottom: 100%;
 }

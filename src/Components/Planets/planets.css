@@ -1,5 +1,12 @@
 .planets {
-    margin-top: 2%;
+    padding-top: 2%;
+    background-color: darkslategrey;
+    
+}
+
+#light .planets{
+    background-color: rgb(214, 202, 214);
+
 }
 
 .planets h1 {
@@ -59,4 +66,8 @@
 span {
     font-family: 'Kumbh Sans', sans-serif;
     margin: 5% 0 0 5%
+}
+
+.planets .loading{
+    padding-bottom: 100%;
 }

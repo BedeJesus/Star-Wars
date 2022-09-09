@@ -13,7 +13,7 @@ export default function Card(props) {
                     <p className='name'>{props.person.name}</p>
                     <p> <span>Height:</span> {props.person.height}</p>
                     <p className='desc'> {props.description}</p>
-                    <p> <span>Home planet:</span>ainda n</p>
+                    <p> <span>Skin Color: </span>{props.person.skin_color}</p>
 
                 </div>
 

@@ -59,8 +59,6 @@ export default function Row() {
     return (
         <div className='row'>
 
-            {console.log(people)}
-
             {loading ? (
 
                 <>
@@ -90,27 +88,24 @@ export default function Row() {
                                 type={'character'} /></SwiperSlide>
 
                             <SwiperSlide><Card person={people[11]}
-                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
+                                description='Han Solo was a human male smuggler. He became a leader in the Alliance to Restore the Republic and an instrumental figure in the defeat of the Galactic Empire'
                                 type={'character'} /></SwiperSlide>
 
                             <SwiperSlide><Card person={people[8]}
-                                description='The villan of the saga, a great sith lord trained by Palpatine, used to be Anakin Skywalker,but after de convertion to the dark side became Darth Vader'
+                                description='Chewbacca, known affectionately to his friends as Chewie, was a Wookiee male warrior, smuggler, mechanic, pilot, and friend of Han Solo'
                                 type={'character'} /></SwiperSlide>
 
                             <SwiperSlide><Card person={people[22]}
-                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
+                                description='Darth Sidious,known as the Emperor, was a Dark Lord of the Sith and Emperor of the Galactic Empire.He was the mentor of Darth Vader'
                                 type={'character'} /></SwiperSlide>
 
                             <SwiperSlide><Card person={people[27]}
-                                description='Princess Leia is Luke´s sister, a great helper fot the Resistent rebelion against the Empire'
+                                description='Yoda was a legendary Jedi Master who led the Jedi Order in the years leading up to its destruction by the Sith. He was the mentor of Luke Skywalker'
                                 type={'character'} /></SwiperSlide>
 
                         </Swiper>
 
                     </div>
-
-
-                    {/* ASSUNTOS SOBRE STAR WARS   */}
 
                     <h1>Main Terms</h1>
                     <div className='carousel'>
@@ -153,8 +148,6 @@ export default function Row() {
                                 description='The Galactic Republic, also known as the Grand Republic or simply as the Republic, was a democratic union of sovereign star systems spread across light-years of space. Old Republic was a term affixed to the pre-modern Republic that existed until 1032 BBY.'
                             /></SwiperSlide>
 
-
-
                         </Swiper>
 
                     </div>
@@ -163,7 +156,7 @@ export default function Row() {
 
             ) : (
                 <>
-                    <h1>Loading!</h1>
+                    <h1 className='loading'>Loading!</h1>
                 </>
             )}
 

@@ -16,7 +16,7 @@ export default function Planets() {
             async function getData() {
                 shouldLog.current = false
 
-                for (let i = 1; i <= 5; i++) {
+                for (let i = 1; i <= 25; i++) {
 
                     if (i === 17) {
                         i++ //api doesnt have the 17 character
@@ -46,7 +46,7 @@ export default function Planets() {
 
                 <>
 
-                    <h1>All planets</h1>
+                    <h1>Some Planets From the Saga</h1>
                     <div className='all_planets'>
             
 
@@ -70,7 +70,7 @@ export default function Planets() {
 
             ) : (
                 <>
-                    <h1>Loading!</h1>
+                    <h1 className='loading'>Loading!</h1>
                 </>
             )}
         </div>
