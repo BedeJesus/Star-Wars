@@ -16,7 +16,7 @@ export default function Planets() {
             async function getData() {
                 shouldLog.current = false
 
-                for (let i = 1; i <= 25; i++) {
+                for (let i = 1; i <= 30; i++) {
 
                     if (i === 17) {
                         i++ //api doesnt have the 17 character
