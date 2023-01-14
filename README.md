@@ -10,7 +10,7 @@
     - React JS <br>
     - Consumo da API através da biblioteca Axios (https://www.npmjs.com/package/axios)
     
-<h2>Site como mobile</h2>  
+<h2>Site Mobile</h2>  
 <img src ="for_readme/site_mobile.gif">
 
 <h2>Site Full-screen</h2>  
