@@ -1,5 +1,5 @@
 <h1>Star Wars</h1>
-👨‍💻 Site sobre a franquia de filmes Star Wars <br>
+👨‍💻 Site sobre a franquia de filmes Star Wars. <br>
 🧑🏽‍🦰 Foi desenvolvido com a API "SWAPI API" , disponivel em https://swapi.dev/documentation <br>
 🪄 O site mostra algumas informações sobre a saga, como personagens, filmes, conceitos e planetas.<br>
 🤏🏽 Site totalmente responsivo.
