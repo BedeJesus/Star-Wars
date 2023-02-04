@@ -13,5 +13,5 @@
 <h2>Site Mobile</h2>  
 <img src ="for_readme/site_mobile.gif">
 
-<h2>Site Full-screen</h2>  
+<h2>Site Full-Screen</h2>  
 <img src ="for_readme/site_pc.gif">
